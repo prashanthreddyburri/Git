@@ -20,11 +20,12 @@ Step 3: pushing the folders to github using gitbash:
 3. initializing the git repository in specified folder direcory by using "git init" command.
 4. add remoter URL by using "git remote add origin https://github.com/prashanthreddyburri/TableauTraining.git" command ("git remote add origin URL")
 5. Add files to git repository by using "git add ." (. means all files / if we want to add only one file "git add file_name_with_extension")
-6. after adding files we have to commit using "git commit -m commit_message" (commit_message is custome user defined text)
+6. after adding files we have to commit using "git commit -m "commit_message"" (commit_message is custome user defined text)
 7. push files git repository using "git push origin master"
 8. we can check the files and folders in Git Repository "https://github.com/prashanthreddyburri/TableauTraining.git"
 
 Step 4 : adding / updating data in to a existing file:
-1.  
+1. goto the specified git commited folder and right click and select option "Git GUI Here"
+2. 
 
 
