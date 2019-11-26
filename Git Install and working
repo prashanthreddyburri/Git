@@ -26,6 +26,9 @@ Step 3: pushing the folders to github using gitbash:
 
 Step 4 : adding / updating data in to a existing file:
 1. goto the specified git commited folder and right click and select option "Git GUI Here"
-2. 
+2. it will open Git GUI, and modified files/ un commited files in "UnStaged Changes" and file is open next to it with highlighting modified/ updated lines.
+3. select file in "UnStaged Changes", and click on "Stage Changed" Btn then it(selected Folder) move to "Staged Changes".
+4. select file in "Staged Changes", and click on "Commit" Btn
+5. select file in "Staged Changes", and click on "Push" Btn
 
 
