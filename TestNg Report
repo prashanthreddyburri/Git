@@ -1,0 +1,135 @@
+Steps
+
+Step 1: Install testNG
+	1. install Ecllipse and goto help --> install new software
+	2. place url (http://dl.bintray.com/testng-team/testng-eclipse-release/) in type or select a site  press Add then again Add
+	3. it will show TestNG, select the checkbox and click next , it will show Review the items to be installed, click Next, Accept T&C, click Finish: install anyway and need a restart 
+	4. to virify installed or not, after restart Ecllipse, right click on project in project explorer, then you can See TestNG with creste TestNG Class abd convert to TestNG class.
+
+Step 2: craete  project with  maven java 
+
+3. Annotations used in TestNG
+	Annotations differ from project to project depending on their requirements. Though the requirements change, 
+	the execution flow will be the same for every single project. The following are TestNG annotations, with explanations and examples for each below.
+
+		@BeforeSuite
+		@BeforeTest
+		@BeforeClass
+		@BeforeMethod
+		@Test	
+		@AfterMethod	
+		@AfterClass
+		@AfterTest
+		@AfterSuite	
+			
+		==========================
+		In this TestNG workflow example, @Test is the base annotation in this TestNG workflow. 
+		It is continuous with @Method, which executes before and after execution of @Test. 
+		Now, @Class will execute before and after the execution of @Method, and so on
+		
+		@BeforeSuite
+			@BeforeTest
+				@BeforeClass
+					@BeforeMethod
+						@Test
+					@AfterMethod
+				@AfterClass
+			@AfterTest
+		@AfterSuite
+		
+		==========================
+			
+	A).	@Test
+		
+			In any automation script, @Test annotation is the important part, where we write code/business logic. 
+			If something needs to be automated, that particular code needs to be inserted into the test method. 
+			The test method then executes @Test by passing attributes. Here are some attributes that are used to pass in the test methods.
+
+			dependsOnGroups: 
+				In this attribute, we can get a group of the list to the particular method it depends on. 
+				Example: @Test (groups = { "Organization" ,"Employee" })
+			 
+			alwaysRun: 
+				This attribute can be used whenever we get a situation to run a method continuously, even if the parameters of the process fail. 
+				Example: @Test(alwaysRun = true)
+			 
+			dataProviderClass: 
+				dataProviderClass is class used to provide the data to the dataProvider, so let’s give the class name “Computer.”
+			 
+			dataProvider: 
+				It is used for providing any data to the parameterization.
+				Example: @Test (dataProvider = "Computer")
+			 
+			dependsOnMethods: 
+				Methods are used to execute its dependent method in the same way dependsOnMethods works.
+				Example: @Test (dependsOnMethods = { "start", "init" }) 	
+			
+	B). @BeforeMethod and @AfterMethod
+			
+			@BeforeMethod allows the method to execute before the execution of each @Test methods, 
+			whereas @afterMethod is executed after the execution of each @Test methods.
+			
+			
+	C). @BeforeClass and @AfterClass
+	
+			The method annotated with @BeforeClass will execute only once before the first test method in that particular class is invoked. 
+			You can then initialize or configure set-up for all the conventional test methods. 
+			The @AfterClass annotation will be executed only once, after all the test methods of that particular class have been invoked.
+			
+	D). @BeforeTest and @AfterTest
+	
+			The @BeforeTest methods run after @beforeSuite. 
+			For frameworks like smoke testing, @BeforeTest is used for creating an initial data set up and prior to running other test methods, 
+			whereas @AfterTest annotation will run after the other tests are complete.
+			
+	E). @BeforeSuite and @AfterSuite
+			
+			With the help of @BeforeSuite annotation, we can set up and start the Selenium Webdrivers. 
+			The @AfterSuite annotation is used to stop the Selenium Webdrivers
+		
+		
+	
+4 .Parameters
+
+
+
+
+Reports
+
+5.sending email TestNG Reports
+
+
+
+
+
+==================================================
+What is TestNG?
+TestNG is an automation testing framework in which NG stands for "Next Generation". TestNG is inspired from JUnit which uses the annotations (@)
+Using TestNG you can generate a proper report, and you can easily come to know how many test cases are passed, failed and skipped.
+
+You can execute failed test case separately. For example.
+Suppose, you have five test cases, one method is written for each test case (Assume that the program is written using the main method without using testNG). 
+When you run this program first, three methods are executed successfully, and the fourth method is failed. Then correct the errors present in the fourth method, 
+now you want to run only fourth method because first three methods are anyway executed successfully. This is not possible without using TestNG.
+
+The TestNG provides an option, i.e., testng-failed.xml file in test-output folder. 
+If you want to run only failed test cases means you run this XML file. It will execute only failed test cases.
+
+
+Why Use TestNG with Selenium?
+Default Selenium tests do not generate a proper format for the test results. Using TestNG we can generate test results.
+
+
+Key features of TestNG
+
+		A.	Generate the report in a proper format including a number of test cases runs, the number of test cases passed, the number of test cases failed, and the number of test cases skipped.
+		B.	Multiple test cases can be grouped more easily by converting them into testng.xml file. In which you can make priorities which test case should be executed first.
+		C.	The same test case can be executed multiple times without loops just by using keyword called 'invocation count.'
+		D.	Using testng, you can execute multiple test cases on multiple browsers, i.e., cross browser testing.
+		E.	The testing framework can be easily integrated with tools like Maven, Jenkins, etc.
+		F.	Annotations used in the testing are very easy to understand ex: @BeforeMethod, @AfterMethod, @BeforeTest, @AfterTest
+		G.	WebDriver has no native mechanism for generating reports. TestNG can generate the report in a readable format.
+		H.	TestNG simplifies the way the tests are coded. There is no more need for a static main method in our tests. The sequence of actions is regulated by easy-to-understand annotations that do not require methods to be static.
+		I.	Uncaught exceptions are automatically handled by TestNG without terminating the test prematurely. These exceptions are reported as failed steps in the report.
+
+

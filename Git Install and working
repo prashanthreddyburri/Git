@@ -32,3 +32,18 @@ Step 4 : adding / updating data in to a existing file:
 5. select file in "Staged Changes", and click on "Push" Btn
 
 
+======================================================================
+
+Step 5 : clone from Git to local system 
+1. goto Git repository, and open the project which you want to clone into local system 
+2. copy the github project URL  
+3. goto the destination folder in your system via Command prompt
+4. execute the command " git clone "Github Project URL" then enter 
+
+Step 6: Get updated github code to local system
+1. goto the project which you want to Update into local system via Command prompt
+2. execute the command "git pull origin master 
+
+
+
+
